@@ -11,11 +11,13 @@ addFriend.addEventListener("click",function(){
         istatus.style.color = "green"
         istatus.innerHTML = "Friends🥳";
         addFriend.innerHTML = "Remove Friend"
+        addFriend.style.backgroundColor = "Red"
         count = 1;
     }else{
         istatus.style.color = "red"
         istatus.innerHTML = "Stranger😏";
         addFriend.innerHTML = "Add Friend"
+        addFriend.style.backgroundColor = "green"
         count = 0;
     }
 });
