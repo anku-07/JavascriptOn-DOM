@@ -1,15 +1,21 @@
-let bulb = document.querySelector("#bulb");
-let btn = document.querySelector("button");
-let flag = 0;
+let istatus = document.querySelector("h5");
 
-btn.addEventListener("click",function(){
-    if(flag == 0){
-        bulb.style.backgroundColor = "yellow";
-        console.log("cliocked");
-        flag = 1;
+let addFriend = document.querySelector("#add");
+
+let removeFriend = document.querySelector("#remove");
+let count = 0;
+
+
+addFriend.addEventListener("click",function(){
+    if(count == 0){
+        istatus.style.color = "green"
+        istatus.innerHTML = "Friends🥳";
+        addFriend.innerHTML = "Remove Friend"
+        count = 1;
     }else{
-        bulb.style.backgroundColor = "transparent";
-        console.log("Click Again");
-        flag = 0;
+        istatus.style.color = "red"
+        istatus.innerHTML = "Stranger😏";
+        addFriend.innerHTML = "Add Friend"
+        count = 0;
     }
-})
+});
